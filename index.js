@@ -9,6 +9,7 @@ const departments = require("./router/departments");
 const grades = require("./router/grades");
 const instructors = require("./router/instructors");
 const authRoutes = require("./auth/authRoutes");
+const fileRoutes = require('./router/fileRoutes');
 
 
 const app = express();
@@ -27,6 +28,7 @@ app.use("/attendance",attendance);
 app.use("/grades",grades);
 app.use("/instructors",instructors);
 app.use("/api/auth", authRoutes);
+app.use('/api', fileRoutes);
 
 
 app.listen(port, () => console.log("Server running on port " + port))
