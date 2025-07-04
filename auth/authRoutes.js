@@ -11,5 +11,4 @@ router.post("/login", login);
 // Protected route
 router.get("/profile", verifyToken, profile);
 
-// ✅ Export router (this is key)
 module.exports = router;
